@@ -152,7 +152,7 @@ generateRoutineBtn.addEventListener("click", async () => {
   // Send these products to the AI
   const msg = `Here is the most recent product list in JSON format: 
   ${detailsMsg}
-  When the user asks you to generate a routine in the next message, reference these products.`;
+  Disregard all previous messages of this format. When the user asks you to generate a routine in the next message, reference ONLY these products, nothing more. If no products have been provided in this message, politely remind the user to select products above.`;
   console.log(msg);
   sendSystemMessage(msg);
 
