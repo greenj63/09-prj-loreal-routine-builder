@@ -463,7 +463,7 @@ body {
 
 /* selected products */
 .selected-products {
-  margin: 40px 0;
+  margin: 40px 0px;
   padding: 20px;
   border: 2px solid #000;
   border-radius: 8px;
@@ -475,11 +475,6 @@ body {
   margin-bottom: 20px;
 }
 
-#selectedProductsList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
 
 /* remove default list bullets and center empty message */
 #selectedProductsList {
@@ -487,6 +482,19 @@ body {
   padding: 0;
   margin: 0;
 }
+
+/* Start */
+#selectedProductsList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 12px;
+}
+/* End */
 
 .empty-selected {
   width: 100%;
@@ -600,23 +608,38 @@ body {
 }
 
 .selected-item {
-  width: 140px;
+  width: 100%;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
-  padding: 8px;
+  padding: 10px;
   background: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  text-align: center;
+  gap: 12px;
+  text-align: left;
   position: relative;
   transition:
     transform 160ms ease,
     box-shadow 160ms ease;
 }
 
-@media (max-width: 600px) {
+.selected-item img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  flex: 0 0 84px;
+}
+
+.selected-item strong {
+  font-size: 16px;
+}
+
+.selected-item div {
+  text-align: left;
+}
+
+/* @media (max-width: 600px) {
   #selectedProductsList {
     flex-direction: column;
     gap: 12px;
@@ -644,8 +667,8 @@ body {
   .selected-item div {
     text-align: left;
   }
-}
-
+} */
+/* 
 .selected-item img {
   width: 100%;
   height: 100px;
@@ -661,7 +684,7 @@ body {
 .selected-item div {
   font-size: 12px;
   color: #666;
-}
+} */
 
 /* show a small black 'x' in the top-left on hover */
 .selected-item::before {
@@ -691,12 +714,12 @@ body {
 
 .selected-item:hover::before {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* scale selected item on hover */
 .selected-item:hover {
-  transform: scale(1.06);
+  transform: scale(1.03);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 6;
 }
