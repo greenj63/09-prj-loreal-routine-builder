@@ -544,8 +544,8 @@ body {
   /* ensure the gradient is exactly two repeats wide so a full shift returns to the same pattern */
   background-size: 200% 100%;
   background-repeat: repeat-x;
-  filter: blur(10px);
-  opacity: 0.95;
+  filter: blur(6px);
+  opacity: 0.99;
   /* longer, linear animation across a larger span to avoid visible jumps */
   animation: gradientFlow 6s linear infinite;
 }
@@ -562,7 +562,7 @@ body {
 
 .generate-btn:hover {
   background: #666;
-  transform: scale(1.03);
+  transform: scale(1.01);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
